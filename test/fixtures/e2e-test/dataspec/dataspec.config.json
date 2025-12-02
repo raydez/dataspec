@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "projectName": "性能测试",
+  "databases": [
+    {
+      "name": "hive_prod",
+      "type": "hive",
+      "defaultPartition": "dt"
+    }
+  ],
+  "aiTools": [
+    "cursor",
+    "windsurf",
+    "claude"
+  ],
+  "templates": {
+    "defaultDialect": "hive",
+    "outputDir": "./dataspec/templates"
+  },
+  "validation": {
+    "strictMode": true,
+    "customRules": []
+  }
+}
