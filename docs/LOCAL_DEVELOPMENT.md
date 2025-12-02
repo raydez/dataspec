@@ -100,7 +100,7 @@ pnpm build
 
 **预期输出：**
 ```
-> @raydez/dataspec@0.1.0 build /path/to/dataspec
+> @dpxing/dataspec@0.1.0 build /path/to/dataspec
 > tsc
 
 ✓ TypeScript 编译成功
@@ -146,7 +146,7 @@ pnpm link --global
 
 **预期输出：**
 ```
-+ @raydez/dataspec 0.1.0
++ @dpxing/dataspec 0.1.0
 ```
 
 ### 方法 2: 全局安装（从本地包）
@@ -154,10 +154,10 @@ pnpm link --global
 ```bash
 # 在 dataspec 目录中执行
 pnpm pack
-# 这会生成一个 .tgz 文件，例如：raydez-dataspec-0.1.0.tgz
+# 这会生成一个 .tgz 文件，例如：dpxing-dataspec-0.1.0.tgz
 
 # 全局安装这个包
-npm install -g ./raydez-dataspec-0.1.0.tgz
+npm install -g ./dpxing-dataspec-0.1.0.tgz
 ```
 
 ### 方法 3: 本地项目安装
@@ -499,13 +499,13 @@ pnpm test
 
 # 4. 打包
 pnpm pack
-# 生成 raydez-dataspec-0.1.0.tgz
+# 生成 dpxing-dataspec-0.1.0.tgz
 
 # 5. 分发
 # 将 .tgz 文件复制到目标机器
 
 # 6. 在目标机器上安装
-npm install -g raydez-dataspec-0.1.0.tgz
+npm install -g dpxing-dataspec-0.1.0.tgz
 
 # 7. 验证
 dataspec --version
@@ -543,7 +543,7 @@ pnpm unlink --global
 ### 卸载全局安装
 
 ```bash
-npm uninstall -g @raydez/dataspec
+npm uninstall -g @dpxing/dataspec
 ```
 
 ### 验证卸载

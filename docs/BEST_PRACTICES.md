@@ -371,7 +371,7 @@ jobs:
           cache: 'npm'
 
       - name: Install DataSpec
-        run: npm install -g @raydez/dataspec
+        run: npm install -g @dpxing/dataspec
 
       - name: Validate definitions
         run: |
@@ -429,7 +429,7 @@ jobs:
           node-version: '20'
 
       - name: Install DataSpec
-        run: npm install -g @raydez/dataspec
+        run: npm install -g @dpxing/dataspec
 
       - name: Generate DDL
         run: |

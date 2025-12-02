@@ -21,10 +21,10 @@
 
 ```bash
 # 全局安装
-npm install -g @raydez/dataspec
+npm install -g @dpxing/dataspec
 
 # 或作为项目依赖
-npm install --save-dev @raydez/dataspec
+npm install --save-dev @dpxing/dataspec
 ```
 
 ### 初始化项目
@@ -442,7 +442,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @raydez/dataspec
+      - run: npm install -g @dpxing/dataspec
       - run: dataspec validate --json
 ```
 

@@ -17,7 +17,7 @@ DataSpec 是一个为数据开发团队量身定制的智能化工具，帮助�
 ### 安装
 
 ```bash
-npm install -g @raydez/dataspec
+npm install -g @dpxing/dataspec
 ```
 
 ### 初始化项目
@@ -38,10 +38,11 @@ dataspec validate
 
 ## 📖 文档
 
-- [用户手册](docs/user-guide.md) - 详细使用说明
-- [技术架构](docs/architecture.md) - 技术设计文档
-- [开发计划](docs/development-plan.md) - 开发路线图
-- [示例教程](docs/examples.md) - 实际案例
+- [快速开始](docs/QUICK_START.md) - 简单示例
+- [用户手册](docs/USER_GUIDE.md) - 详细使用说明
+- [命令参考](docs/COMMAND_REFERENCE.md) - 命令说明
+- [最佳实践](docs/BEST_PRACTICES.md) - 开发建议
+- [本地开发](docs/LOCAL_DEVELOPMENT.md) - 贡献代码指南
 
 ## 🎯 核心命令
 
@@ -148,10 +149,6 @@ pnpm build
 # 本地链接
 npm link
 ```
-
-## 🤝 贡献
-
-欢迎贡献！请阅读 [贡献指南](CONTRIBUTING.md)。
 
 ## 📝 许可证
 
