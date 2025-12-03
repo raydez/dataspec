@@ -26,12 +26,6 @@ npm install -g @dpxing/dataspec
 # 在数据仓库代码目录中初始化
 dataspec init
 
-# 创建表定义
-dataspec table create dw.sales_daily
-
-# 编辑生成的文件
-vim dataspec/tables/dw.sales_daily.md
-
 # 验证定义
 dataspec validate
 ```
@@ -46,24 +40,30 @@ dataspec validate
 
 ## 🎯 核心命令
 
+### CLI 命令
+
 ```bash
 # 项目管理
 dataspec init                           # 初始化项目
 dataspec validate                       # 验证所有定义
+```
 
-# 表定义管理
-dataspec table create <name>            # 创建表定义
-dataspec table list                     # 列出所有表
-dataspec table show <name>              # 查看表详情
+### Slash Commands（用于 AI 工具如 Claude Code）
 
-# 指标定义管理
-dataspec metric create <name>           # 创建指标定义
-dataspec metric list                    # 列出所有指标
-dataspec metric show <name>             # 查看指标详情
+```bash
+# 定义创建
+/dataspec:define table dw.sales_daily                    # 创建表定义
+/dataspec:define metric 销售额 --category "基础指标"      # 创建指标定义
+/dataspec:define table ods.orders --template fact_table  # 使用模板创建表
 
-# SQL 生成（通过 Slash Commands）
-/dataspec:generate ddl <table>          # 生成 DDL
-/dataspec:generate etl <table>          # 生成 ETL 模板
+# 代码生成
+/dataspec:generate ddl dw.sales_daily                   # 生成 DDL 语句
+/dataspec:generate etl dw.sales_daily                   # 生成 ETL 脚本
+/dataspec:generate docs --all --format markdown        # 生成文档
+
+# 验证和发布
+/dataspec:validate definition dw.sales_daily            # 验证定义
+/dataspec:publish                                      # 发布资产
 ```
 
 ### 🌐 SQL 方言支持

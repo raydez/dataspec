@@ -1,6 +1,6 @@
 # DataSpec 快速开始指南
 
-**版本**: v0.1.0  
+**版本**: v0.1.1  
 **阅读时间**: 5 分钟
 
 ---
@@ -12,10 +12,16 @@
 在 Claude Code 中运行：
 
 ```bash
-/dataspec:init --name "My Data Project" --dialect hive
+/dataspec:init "My Data Project" --dialect hive
 ```
 
-**结果**: 创建完整的项目结构和 5 个 AI 命令文件
+或者使用 CLI：
+
+```bash
+dataspec init
+```
+
+**结果**: 创建完整的项目结构、配置文件和 AI 命令文件
 
 ---
 
@@ -42,10 +48,10 @@
 ### 4. 验证定义
 
 ```bash
-/dataspec:validate definition dw.sales_daily
+dataspec validate
 ```
 
-**结果**: 检查定义文件的完整性和正确性
+**结果**: 检查所有定义文件的完整性和正确性
 
 ---
 

@@ -1,6 +1,6 @@
 # DataSpec 命令参考
 
-**版本**: v0.1.0
+**版本**: v0.1.1
 
 完整的命令参数和示例说明。
 
@@ -8,11 +8,84 @@
 
 ## 命令索引
 
-- [init](#dataspecinit---初始化项目)
-- [define](#dataspecdefine---定义表指标)
-- [generate](#dataspecgenerate---生成代码)
-- [validate](#dataspecvalidate---验证)
-- [publish](#dataspecpublish---发布)
+### CLI 命令
+- [dataspec init](#dataspec-init---初始化项目)
+- [dataspec validate](#dataspec-validate---验证定义)
+
+### Slash Commands (用于 AI 工具)
+- [/dataspec:init](#dataspecinit---初始化项目)
+- [/dataspec:define](#dataspecdefine---定义表指标)
+- [/dataspec:generate](#dataspecgenerate---生成代码)
+- [/dataspec:validate](#dataspecvalidate---验证)
+- [/dataspec:publish](#dataspecpublish---发布)
+
+---
+
+## `dataspec init` - 初始化项目
+
+### 描述
+在当前目录初始化新的 DataSpec 项目。
+
+### 语法
+```bash
+dataspec init [options]
+```
+
+### 参数
+
+| 参数 | 类型 | 必需 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `--project-name` | string | 否 | - | 项目名称 |
+| `--force` | boolean | 否 | false | 强制重新初始化（覆盖已有文件）|
+
+### 示例
+
+```bash
+# 基础初始化
+dataspec init
+
+# 指定项目名称
+dataspec init --project-name "Sales Platform"
+
+# 强制重新初始化
+dataspec init --force
+```
+
+---
+
+## `dataspec validate` - 验证定义
+
+### 描述
+验证所有数据定义文件的完整性和正确性。
+
+### 语法
+```bash
+dataspec validate [options]
+```
+
+### 参数
+
+| 参数 | 类型 | 必需 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `--type` | choice | 否 | all | 验证类型 (table|metric|all) |
+| `--json` | boolean | 否 | false | 以 JSON 格式输出结果 |
+| `--verbose` | boolean | 否 | false | 显示详细错误信息 |
+
+### 示例
+
+```bash
+# 验证所有定义
+dataspec validate
+
+# 只验证表定义
+dataspec validate --type table
+
+# JSON 格式输出
+dataspec validate --json
+
+# 详细输出
+dataspec validate --verbose
+```
 
 ---
 
@@ -23,18 +96,20 @@
 
 ### 语法
 ```bash
-/dataspec:init [options]
+/dataspec:init "项目名称" [options]
 ```
 
 ### 参数
 
 | 参数 | 类型 | 必需 | 默认值 | 说明 |
 |------|------|------|--------|------|
-| `--name` | string | 否 | 当前目录名 | 项目名称 |
+| `项目名称` | string | 是 | - | 项目名称 |
+| `--project-type` | choice | 否 | data-warehouse | 项目类型 |
 | `--dialect` | choice | 否 | hive | SQL 方言 |
-| `--template` | choice | 否 | basic | 项目模板 |
-| `--skip-examples` | boolean | 否 | false | 跳过示例文件 |
+| `--owner` | string | 否 | 当前用户 | 项目负责人 |
+| `--interactive` | boolean | 否 | true | 交互模式 |
 | `--skip-git` | boolean | 否 | false | 跳过 Git 初始化 |
+| `--template` | choice | 否 | basic | 项目模板 |
 
 ### 选项值
 
@@ -53,16 +128,16 @@
 
 ```bash
 # 基础初始化
-/dataspec:init
+/dataspec:init "Sales Platform"
 
-# 指定项目名称和方言
-/dataspec:init --name "Sales Platform" --dialect maxcompute
+# 指定项目类型和方言
+/dataspec:init "销售数据平台" --project-type bi --dialect maxcompute
 
-# 企业模板
-/dataspec:init --template enterprise --dialect hive
+# 指定负责人和模板
+/dataspec:init "企业数据平台" --owner "Data Team" --template advanced --dialect hive
 
-# 跳过示例和 Git
-/dataspec:init --skip-examples --skip-git
+# 跳过 Git 初始化
+/dataspec:init "测试项目" --skip-git --interactive false
 ```
 
 ### 输出

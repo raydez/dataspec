@@ -1,7 +1,7 @@
 # DataSpec 用户手册
 
-**版本：** 0.1.0  
-**更新时间：** 2025-11-25
+**版本：** 0.1.1
+**更新时间：** 2025-12-02
 
 ---
 
@@ -31,7 +31,10 @@ npm install --save-dev @dpxing/dataspec
 
 ```bash
 # 在项目根目录执行
-dataspec init --project-name "数据中台"
+dataspec init
+
+# 或者在 AI 工具中初始化
+/dataspec:init "数据中台"
 ```
 
 这将创建以下目录结构：
@@ -50,8 +53,8 @@ dataspec/
 ### 5 分钟快速上手
 
 ```bash
-# 1. 创建表定义
-dataspec table create dw.user_behavior_daily
+# 1. 创建表定义（使用 AI 工具）
+/dataspec:define table dw.user_behavior_daily --owner "Data Team"
 
 # 2. 编辑表定义文件
 # vim dataspec/tables/dw.user_behavior_daily.md
@@ -59,11 +62,11 @@ dataspec table create dw.user_behavior_daily
 # 3. 验证定义
 dataspec validate
 
-# 4. 生成 DDL
-dataspec generate ddl dw.user_behavior_daily
+# 4. 生成 DDL（使用 AI 工具）
+/dataspec:generate ddl dw.user_behavior_daily
 
-# 5. 生成 ETL 模板
-dataspec generate etl dw.user_behavior_daily
+# 5. 生成 ETL 模板（使用 AI 工具）
+/dataspec:generate etl dw.user_behavior_daily
 ```
 
 ---
@@ -499,7 +502,7 @@ DataSpec 只管理元数据（表结构、字段定义），不涉及实际数�
 ---
 
 **DataSpec - AI-native tool for data development teams**  
-**版本：** 0.1.0  
+**版本：** 0.1.1  
 **许可：** MIT
 
 ---

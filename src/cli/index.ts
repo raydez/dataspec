@@ -16,7 +16,7 @@ const program = new Command();
 program
   .name('dataspec')
   .description('AI-native tool for data development teams')
-  .version('0.1.0');
+  .version('0.1.1');
 
 // ============ init 命令 ============
 program

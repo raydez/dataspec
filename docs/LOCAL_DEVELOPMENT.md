@@ -1,7 +1,7 @@
 # DataSpec 本地开发与安装指南
 
-**版本：** 0.1.0  
-**更新时间：** 2025-11-25
+**版本：** 0.1.1
+**更新时间：** 2025-12-02
 
 ---
 
@@ -100,7 +100,7 @@ pnpm build
 
 **预期输出：**
 ```
-> @dpxing/dataspec@0.1.0 build /path/to/dataspec
+> @dpxing/dataspec@0.1.1 build /path/to/dataspec
 > tsc
 
 ✓ TypeScript 编译成功
@@ -146,7 +146,7 @@ pnpm link --global
 
 **预期输出：**
 ```
-+ @dpxing/dataspec 0.1.0
++ @dpxing/dataspec 0.1.1
 ```
 
 ### 方法 2: 全局安装（从本地包）
@@ -154,10 +154,10 @@ pnpm link --global
 ```bash
 # 在 dataspec 目录中执行
 pnpm pack
-# 这会生成一个 .tgz 文件，例如：dpxing-dataspec-0.1.0.tgz
+# 这会生成一个 .tgz 文件，例如：dpxing-dataspec-0.1.1.tgz
 
 # 全局安装这个包
-npm install -g ./dpxing-dataspec-0.1.0.tgz
+npm install -g ./dpxing-dataspec-0.1.1.tgz
 ```
 
 ### 方法 3: 本地项目安装
@@ -184,7 +184,7 @@ dataspec --version
 
 **预期输出：**
 ```
-0.1.0
+0.1.1
 ```
 
 ### 检查帮助信息
@@ -499,13 +499,13 @@ pnpm test
 
 # 4. 打包
 pnpm pack
-# 生成 dpxing-dataspec-0.1.0.tgz
+# 生成 dpxing-dataspec-0.1.1.tgz
 
 # 5. 分发
 # 将 .tgz 文件复制到目标机器
 
 # 6. 在目标机器上安装
-npm install -g dpxing-dataspec-0.1.0.tgz
+npm install -g dpxing-dataspec-0.1.1.tgz
 
 # 7. 验证
 dataspec --version
