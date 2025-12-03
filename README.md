@@ -153,3 +153,7 @@ npm link
 ## 📝 许可证
 
 MIT License
+
+## 🙏 致谢
+
+- OpenSpec - 本项目借鉴 OpenSpec 项目，感谢 OpenSpec 团队提供的优秀架构。
