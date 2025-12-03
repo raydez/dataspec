@@ -89,6 +89,7 @@ jspm_packages/
 
 # Optional npm cache directory
 .npm
+publish.sh
 
 # Optional eslint cache
 .eslintcache

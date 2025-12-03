@@ -37,6 +37,7 @@ dataspec validate
 - [命令参考](docs/COMMAND_REFERENCE.md) - 命令说明
 - [最佳实践](docs/BEST_PRACTICES.md) - 开发建议
 - [本地开发](docs/LOCAL_DEVELOPMENT.md) - 贡献代码指南
+- [发布脚本](publish.sh) - 自动化发布到 npm
 
 ## 🎯 核心命令
 
@@ -148,6 +149,25 @@ pnpm build
 
 # 本地链接
 npm link
+```
+
+## 📦 发布到 npm
+
+### 快速发布
+
+```bash
+# 使用发布脚本
+./publish.sh
+```
+
+### 手动发布
+
+```bash
+# 1. 构建和测试
+pnpm build && pnpm test
+
+# 2. 发布到 npm
+npm publish --access public
 ```
 
 ## 📝 许可证

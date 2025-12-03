@@ -1,6 +1,6 @@
 {
   "name": "@dpxing/dataspec",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI-native tool for data development teams",
   "type": "module",
   "main": "./dist/index.js",
@@ -26,7 +26,7 @@
     "sql-generator",
     "ai-native"
   ],
-  "author": "Data Platform Team",
+  "author": "raydez",
   "license": "MIT",
   "dependencies": {
     "commander": "^12.1.0",
